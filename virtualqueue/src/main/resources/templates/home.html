@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<p>ThymeLeaf example: We are printing an array of Strings:</p>
+
+<!--Ex. 1 printing out a list of Strings -->
+<ul th:each="reservation : ${reservations}">
+    <li th:text="${reservation.userId}"></li>
+</ul>
+<div class="container">
+    <form action="/notify" method="GET">
+        <div class="field">
+            <div class="control">
+
+                <h1>Send SMS</h1>
+                <input class="input is-primary" type="text" placeholder="keywords">
+
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
